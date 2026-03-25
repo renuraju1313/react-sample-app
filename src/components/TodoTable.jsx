@@ -1,5 +1,6 @@
 // TodoTableInfinite.jsx
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import "./TodoTable.css";
 
 const TodoTable = () => {
   const [todos, setTodos] = useState([]);
@@ -53,30 +54,27 @@ const TodoTable = () => {
   }
 
   return (
-    <div className="p-6 min-h-screen bg-gray-100 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6 text-blue-600">Todo List</h1>
-      <div className="overflow-x-auto w-full max-w-4xl">
-        <table className="min-w-full bg-white rounded-lg shadow-md overflow-hidden">
-          <thead className="bg-blue-500 text-white">
+    <div className="todo-container">
+      <h1 className="todo-heading">Todo List</h1>
+      <div className="todo-wrapper">
+        <table className="todo-table">
+          <thead>
             <tr>
-              <th className="py-3 px-4 text-left">ID</th>
-              <th className="py-3 px-4 text-left">Title</th>
-              <th className="py-3 px-4 text-left">Completed</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Completed</th>
             </tr>
           </thead>
           <tbody>
             {todos.map((todo) => (
-              <tr
-                key={todo.id}
-                className="border-b hover:bg-gray-100 transition"
-              >
-                <td className="py-2 px-4">{todo.id}</td>
-                <td className="py-2 px-4">{todo.title}</td>
-                <td className="py-2 px-4">
+              <tr key={todo.id}>
+                <td>{todo.id}</td>
+                <td>{todo.title}</td>
+                <td>
                   {todo.completed ? (
-                    <span className="text-green-600 font-semibold">Yes</span>
+                    <span className="todo-status-yes">Yes</span>
                   ) : (
-                    <span className="text-red-600 font-semibold">No</span>
+                    <span className="todo-status-no">No</span>
                   )}
                 </td>
               </tr>
@@ -85,7 +83,7 @@ const TodoTable = () => {
         </table>
         {/* Loader div */}
         {visibleCount < allTodos.length && (
-          <div ref={loaderRef} className="py-4 text-center text-gray-500">
+          <div ref={loaderRef} className="todo-loader">
             Loading more...
           </div>
         )}
