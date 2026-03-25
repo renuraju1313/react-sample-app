@@ -62,8 +62,7 @@ const TodoTable = () => {
             <tr>
               <th>Apswrs</th>
               <th>Raju loves simi</th>
-              <th>simi</th>
-              <th>Raju Loves Bindu</th>
+              <th>Bindu Loves Raju</th>
             </tr>
           </thead>
           <tbody>
