@@ -60,9 +60,10 @@ const TodoTable = () => {
         <table className="todo-table">
           <thead>
             <tr>
-              <th>Junior college</th>
-              <th>Raju kiss</th>
-              <th>Hema</th>
+              <th>Apswrs</th>
+              <th>Raju loves simi</th>
+              <th>simi</th>
+              <th>Raju Loves Bindu</th>
             </tr>
           </thead>
           <tbody>
