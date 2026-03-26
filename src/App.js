@@ -1,12 +1,14 @@
 import TodoTable from './components/TodoTable';
-import feature11 from './components/feature11';
-import feature12 from './components/feature12';
+import Feature13 from './components/Feature13';
+import Feature14 from './components/Feature14';
+import Feature15 from './components/Feature15';
 function App() {
   return (
     <div>
       <TodoTable />
-      <feature11 />
-      <feature12 />
+      <Feature13 />
+      <Feature14 />
+      <Feature15 />
     </div>
   );
 }
